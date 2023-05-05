@@ -1,0 +1,176 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+
+/* 变量 */
+:root {
+    --container-color: #1a1e21;
+    --second-color: #fd8f44;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+::selection {
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: 0.1s;
+}
+
+header.shadow {
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: 0.4s;
+}
+
+header.shadow .logo {
+    color: var(--text-color);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+.logo span {
+    color: var(--second-color);
+}
+
+.login {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.login:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+#user {
+    position: relative;
+    display: none;
+}
+
+#user img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+
+
+#user .box {
+    position: absolute;
+    left: 50%;
+    top: 220%;
+    transform: translate(-50%, -50%);
+    width: 6.5rem;
+    box-shadow: 0 4px 14px hsl(355deg 25%  15% / 10%);
+    border-radius: 2px;
+    background-color: #fff;
+    display: none; 
+}
+
+#user:hover .box {
+    display: block;
+}
+
+#user .box a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+#user .box a:hover {
+    background-color: var(--second-color);
+    color: #fff;
+}
+
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.footer p {
+    font-size: 0.938rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social span{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.social span:hover {
+    color: var(--second-color);
+    transition: 0.3s all linear;
+}
+
+
+

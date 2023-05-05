@@ -1,0 +1,180 @@
+/* 响应式 */
+@media (max-width: 1080px) {
+    .container {
+        margin:0 auto;
+        width: 95%;
+    }
+    .home-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav {
+        padding: 14px 0;
+    }
+
+    .post-container {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .post-filter {
+        top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px 0;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    .header-content {
+        margin-top: 3rem !important;
+    }
+
+    .home {
+        min-height: 380px;
+    }
+
+    .post-filter {
+        top: 1.2rem;
+    }
+
+    .home-title {
+        font-size: 3rem;
+    }
+
+
+    /* post-page */
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-img {
+        height: 370px;
+    }
+
+    .post-header {
+        height: 435px;
+    }
+
+    .post-content {
+        margin-top: 9rem !important;
+    }
+}
+
+
+@media (max-width: 570px) {
+    /* post-page */
+    .post-header {
+        height: 390px;
+    }
+
+    .header-title {
+        width: 100%;
+    }
+
+    .header-img {
+        height: 340px;
+    }
+
+    .footer {
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 396px) {
+    header {
+        padding: 0 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    #user img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .home-title {
+        font-size: 2rem;
+    }
+
+    .home-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .home {
+        min-height: 300px;
+    }
+
+    .post-filter {
+        position: static;
+        top: 1rem;
+    }
+
+
+    .post-box {
+        padding: 10px;
+    }
+
+    .header-title {
+        font-size: 1.4rem;
+    }
+    
+    .header-img {
+        height: 240px;
+    }
+
+    .post-header {
+        height: 335px;
+    }
+
+    .post-content {
+        margin-top: 5rem !important;
+    }
+
+    .post-text {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .comment-profile {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .cm-box {
+        height: 2rem;
+        font-size: 12px;
+    }
+
+    .cm-send {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .comment-content {
+        margin: 1rem 0;
+    }
+
+    .comment-content .cm-img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .comment-content .content {
+        row-gap: 0.1rem;
+        padding: 0;
+    }
+}

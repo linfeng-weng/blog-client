@@ -1,0 +1,77 @@
+.comment {
+    margin: auto;
+    max-width: 800px;
+    background-color: #fff;
+    margin-bottom: 5rem;
+}
+
+.comment .title {
+    font-weight: 600;
+}
+
+.comment-content {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    
+}
+
+.comment-content .cm-img {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--second-color);
+}
+
+.comment-content .content {
+    width: 800px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    padding: 0.2rem 0;
+}
+
+.comment-content .cm-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.comment-content .cm-content {
+    padding: 5px 5px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.comment-content .cm-date {
+    padding: 5px 5px;
+    font-size: 0.8rem;
+    color: rgb(109, 109, 109);
+}
+
+
+.comment-content .cm-del {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 5px;
+}
+
+.comment-content .cm-del button{
+    padding: 0.2rem 1rem;
+    background-color: rgb(255, 45, 45);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.comment-content .cm-del button:hover {
+    background: hsl(0, 64%, 50%);
+    transition: 0.3s;
+}

@@ -1,0 +1,87 @@
+body {
+    background: var(--container-color);
+}
+
+.title p {
+    margin: 6rem 0 0;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+.title span {
+    color: var(--second-color);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+form {
+    background-color: #fff;
+    width: 25rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #8d8d8d;
+}
+
+.username, .password, .submit{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.2rem;
+    margin: 0.5rem 1rem;
+    /* margin-bottom: 0.5rem; */
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid var(--second-color);
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: var(--second-color);
+    color: #fff;
+    margin: 0 1rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+.register-link a {
+    color: var(--second-color);
+}
+
