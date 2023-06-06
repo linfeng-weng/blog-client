@@ -48,14 +48,15 @@ const formatDate = (date, format) => {
 }
 
 
-let page = 0
+
 /* 文章渲染 */
+let page = 0
 const articleRender = async() => {
   const postBox = document.querySelector('.post')
   const articles = await http.get('/api/articles', {params: { page }})
   const articleArr = articles.data.data.map( item => `
   <div class="post-box">
-    <div class="post-img-box"><img src="${ baseURL + item.imageUrl }" alt="" class="post-img"></div>
+    <div class="post-img-box"><img data-src="${ baseURL + item.imageUrl }" class="post-img"></div>
     <h2 class="category">${ item.tag }</h2>
     <a href="./pages/post-page.html?aid=${ item._id }" class="post-title">
         ${ item.title }
@@ -69,11 +70,38 @@ const articleRender = async() => {
   </div>
   `)
 
-  // postBox.innerHTML = ''
   postBox.innerHTML += articleArr.join('')
+
+  /* 图片懒加载 */
+  const imgs = document.querySelectorAll('img[data-src]')
+  const config = {
+      rootMargin: '10px',
+      threshold: 0,
+  }
+  let observer = new IntersectionObserver((entries, self) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            let img = entry.target
+            let src = img.dataset.src
+            if (src) {
+                img.src = src
+                img.removeAttribute('data-src')
+            }
+            // 解除观察
+            self.unobserve(entry.target)
+        }
+      })
+  }, config)
+
+  imgs.forEach((image) => {
+      observer.observe(image)
+  })
 }
 
 articleRender()
+
+
+
 
 // 触底加载更多文章
 window.addEventListener('scroll', () => {
